@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa; /* Light gray */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #343a40; /* Dark gray */
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .message-list {
+            max-width: 800px; /* Limiting list width */
+            margin: 0 auto;
+            padding: 0;
+            list-style-type: none;
+            counter-reset: message-counter; /* Resetting the counter */
+        }
+
+        .message-list li {
+            background-color: #ffffff; /* White */
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            transition: transform 0.3s ease; /* Smooth transition */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            counter-increment: message-counter; /* Incrementing the counter */
+        }
+
+        .message-list li:hover {
+            transform: translateY(-5px); /* Lift up on hover */
+        }
+
+        .message-list li:nth-child(odd) {
+            background-color: #f0f0f0; /* Light gray variant */
+        }
+
+        h2, p {
+            margin: 0;
+            color: #343a40; /* Dark gray */
+        }
+
+        .delete-checkbox {
+            margin-left: 10px; /* Add some space between checkbox and message content */
+        }
+
+        .contact-info {
+            flex: 1; /* Take remaining space */
+            padding-left: 10px; /* Add some space */
+        }
+
+        .index-number {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .index-number::before {
+            content: counter(message-counter); /* Display the counter value */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Messages</h1>
+    <ul class="message-list">
+        <% messages.reverse().forEach((message, index) => { %>
+        <li>
+            <span class="index-number"></span>
+            <div class="contact-info">
+                <h2>Name: <%= message.username %></h2>
+                <p>Email: <%= message.email %></p>
+                <p>Phone: <%= message.phone %></p>
+                <p>Message: <%= message.message %></p>
+            </div>
+            <input type="checkbox" class="delete-checkbox">
+        </li>
+        <% }); %>
+    </ul>
+</body>
+
+</html>

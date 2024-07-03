@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEL WEBSITE | CONTACT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar bg-dark">
+
+        <div class="container">
+            <h1 class="logo lg-heading text-light">WT</h1>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="/">Home</a></li>
+                <li class="nav-item"><a href="/about">About</a></li>
+                <li class="nav-item"><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+
+    <section class="contact-form">
+
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="company-address">
+
+                    <div class="address-group">
+                        <i class="fa-3x text-red fa-map-marker-alt"></i>
+                        <h2 class="text-gray md-headling">Location</h2>
+                        <p class="">Talab katta hingoli</p>
+                    </div>
+                    <div class="address-group">
+                        <i class="fa-3x text-red fa-envelope"></i>
+                        <h2 class="text-gray md-headling">Email</h2>
+                        <p class=""> rohan@gmail.com</p>
+                    </div>
+                    <div class="address-group">
+                        <i class="fa-3x fa-phone-square-alt text-red"></i>
+                        <h2 class="text-gray md-headling">Call</h2>
+                        <p class=""> Lorem, ipsum.</p>
+                    </div>
+
+                    <img src="./img/company-img.jpg" alt="company buidling">
+    
+                </div>
+                <form action="/storedata" id="contactForm" method="post" class="form"> 
+                    <h1 class="lg-heading text-black">Contact us</h1>
+                    <p class="text-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, necessitatibus. Corrupti laborum laudantium repellendus distinctio alias rerum atque est tempora.
+
+                    </p>
+
+
+                    <div class="form-group">
+                        <label for="username">Full name</label>
+                        <input type="text" name="username" id="username">
+                    </div>
+                    <div class="form-group">
+                         <label for="phone">Phone No:</label>
+                        <input type="phone" name="phone" id="phone">
+                    </div>
+                    <div class="form-group">
+                         <label for="email">Email id</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="form-group">
+                         <label for="message">Enter your message</label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                    <button type="submit" class="form-btn">Submit</button>
+                </form>
+            </div>
+
+        </div>
+       
+    </section>
+
+</body>
+</html>
